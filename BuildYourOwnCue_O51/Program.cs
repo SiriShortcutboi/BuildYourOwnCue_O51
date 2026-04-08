@@ -11,9 +11,9 @@ public class Program //BuildYourOwnQueueO51
         queue.Enqueue("Mage");
         queue.Enqueue("Archer");
 
-        Console.WriteLine(queue.Dequeue());
-        Console.WriteLine(queue.Dequeue());
-        Console.WriteLine(queue.Dequeue());
+        //Console.WriteLine(queue.Dequeue());
+       // Console.WriteLine(queue.Dequeue());
+       // Console.WriteLine(queue.Dequeue());
 	}
 }
 
@@ -23,16 +23,20 @@ public class SimpleQueue
     private string[] items = new string[10]; //declare 10 slots automatically
     private int count = 0;
 
-    Enqueue(string item)
+    public void Enqueue(string item)
     {
-        items.Add(inputItem);
+        items.Append(item);
         count++;
+        
     }
 
-     Dequeue(string item)
+    public string Dequeue()
     {
-        items.subtract;//not real needs to change
-        count++;
+        string temp = items[0];
+        items.RemoveAt(0);//test this
+        count--; 
+        return temp;
+     
 
     }
 }
