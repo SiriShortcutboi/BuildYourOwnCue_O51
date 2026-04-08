@@ -11,21 +11,21 @@ public class Program //BuildYourOwnQueueO51
         queue.Enqueue("Mage");
         queue.Enqueue("Archer");
 
-        //Console.WriteLine(queue.Dequeue());
-       // Console.WriteLine(queue.Dequeue());
-       // Console.WriteLine(queue.Dequeue());
+       Console.WriteLine(queue.Dequeue());
+       Console.WriteLine(queue.Dequeue());
+       Console.WriteLine(queue.Dequeue());
 	}
 }
 
 public class SimpleQueue
 {
     //Array<string> array = new Array<string> {"1", "2","3","4","5","6","7", "8", "9", "10",};
-    private string[] items = new string[10]; //declare 10 slots automatically
+    private List<string> items = new List<string>(); //declare 10 slots automatically
     private int count = 0;
 
     public void Enqueue(string item)
     {
-        items.Append(item);
+        items.Add(item); // use add for list , append for array
         count++;
         
     }
